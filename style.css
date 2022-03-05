@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+.square:hover {
+    background-color: red;
+}
+
+.painted{
+    background-color: red;
+}
+
+.clear{
+    padding: 10px;
+    margin: 20px;
+}

@@ -1,6 +1,8 @@
+let light = 255;
 
 function createGrid(number){
     let size = 500/number;
+
 
     let sqNum = (size.toString()+"px ").repeat(number) 
 
@@ -19,8 +21,18 @@ function createGrid(number){
         div.style.width = `${size}`;
         div.style.height = `${size}`;
         div.classList = "square";
-        div.addEventListener("mouseover", e => div.classList = "painted")
-        div.addEventListener("click", e => div.classList.remove("painted"))
+        //div.addEventListener("mouseover", e => div.style.backgroundColor = `rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`);
+        div.addEventListener("mouseover", e => {
+
+            div.style.backgroundColor = `rgb(${light.toString()},${light.toString()},${light.toString()})`;
+
+            light-=15;
+
+            console.log(div.style.backgroundColor);
+        });
+
+        
+
         container.appendChild(div);
     }
 
